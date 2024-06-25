@@ -1,0 +1,13 @@
+.box {
+  width: 300px;
+  height: 500px;
+  border: 2px, solid, black;
+}
+.card {
+  width: 200px;
+  height: 200px;
+  border: 2px, solid, black;
+}
+.container {
+  display: flex;
+}
