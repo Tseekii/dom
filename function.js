@@ -36,28 +36,46 @@ function generateColor() {
   return `rgb(${rColor},${gColor},${bColor})`;
 }
 
-const box = document.getElementsByClassName("box")[0];
-const btn = document.getElementsByTagName("button")[0];
+// const box = document.getElementsByClassName("box")[0];
+// const btn = document.getElementsByTagName("button")[0];
+// // function changecolor() {
+// //   box.style.backgroundColor = generateColor();
+// // }
+// // btn.addEventListener("click", changecolor);
+
+// const cards = document.getElementsByClassName("card");
+// const btncolor = document.getElementsByTagName("button")[1];
 // function changecolor() {
-//   box.style.backgroundColor = generateColor();
+//   for (let i = 0; i < cards.length; i++) {
+//     cards[i].style.backgroundColor = generateColor();
+//   }
 // }
-// btn.addEventListener("click", changecolor);
+// btncolor.addEventListener("click", changecolor);
 
-const cards = document.getElementsByClassName("card");
-const btncolor = document.getElementsByTagName("button")[1];
-function changecolor() {
-  for (let i = 0; i < cards.length; i++) {
-    cards[i].style.backgroundColor = generateColor();
-  }
-}
-btncolor.addEventListener("click", changecolor);
+// // add box
+// const addBtn = document.getElementById("addBtn");
 
-// add box
-const addBtn = document.getElementById("addBtn");
+// addBtn.addEventListener("click", function () {
+//   const newBox = document.createElement("div");
+//   newBox.className = "box";
+//   const parent = document.getElementsByClassName("boxes")[0];
+//   parent.appendChild(newBox);
+// });
+// // audio
+const audio = document.getElementsByTagName("audio")[0];
+const pausebtn = document.getElementById("pausebtn");
+const playbtn = document.getElementById("playbtn");
 
-addBtn.addEventListener("click", function () {
-  const newBox = document.createElement("div");
-  newBox.className = "box";
-  const parent = document.getElementsByClassName("boxes")[0];
-  parent.appendChild(newBox);
+console.log(playbtn);
+
+playbtn.addEventListener("click", () => {
+  //play song
+  audio.play();
+  console.log("AUD", audio);
+});
+
+pausebtn.addEventListener("click", () => {
+  //pause song
+  audio.pause();
+  console.log("AUD", audio);
 });
