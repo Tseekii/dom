@@ -11,3 +11,27 @@
 .container {
   display: flex;
 }
+.cd {
+  height: 100px;
+  width: 100px;
+  background-image: url(./blackred.avif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.disc_Erguuleh {
+  animation-name: rotation;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

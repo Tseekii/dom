@@ -65,13 +65,32 @@ function generateColor() {
 const audio = document.getElementsByTagName("audio")[0];
 const pausebtn = document.getElementById("pausebtn");
 const playbtn = document.getElementById("playbtn");
+const nextbtn = document.getElementById("nextbtn");
+const songs = [
+  "./Adele - Someone Like You (Official Music Video).mp3",
+  "./Rihanna - We Found Love ft. Calvin Harris.mp3",
+  "./Rihanna - Diamonds.mp3",
+];
 
 console.log(playbtn);
-
+let currentsong = 0; // 1, 2, 3
 playbtn.addEventListener("click", () => {
   //play song
+  audio.src = songs[0];
   audio.play();
   console.log("AUD", audio);
+});
+
+nextbtn.addEventListener("click", () => {
+  //next song
+  currentsong++;
+  if (currentsong === songs.length) {
+    currentsong = 0;
+  }
+  audio.src = songs[currentsong];
+
+  // songs[currentsong]
+  audio.play();
 });
 
 pausebtn.addEventListener("click", () => {
